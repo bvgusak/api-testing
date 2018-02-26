@@ -1,0 +1,24 @@
+group 'com.github.bvgusak'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useTestNG()
+}
+
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.7'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.2'
+    testCompile group: 'com.github.javafaker', name: 'javafaker', version: '0.14'
+    testCompile group: 'com.google.truth', name: 'truth', version: '0.39'
+}
